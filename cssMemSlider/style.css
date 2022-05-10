@@ -14,7 +14,6 @@ body {
 
 h1 {
   font-family: 'Roboto Mono';
-  font-style: normal;
   font-weight: 400;
   margin: 2rem auto;
   font-size: 4rem;
@@ -31,7 +30,6 @@ h1 {
 
 h2 {
   font-family: 'Roboto Mono';
-  font-style: normal;
   font-weight: 400;
   font-size: 2.2rem;
   font-weight: 400;
@@ -69,7 +67,6 @@ input {
 
 .slider_img {
   display: flex;
-  flex-wrap: nowrap;
   width: 400%;
   transition: margin-left 0.2s ease-out;
 }
@@ -101,6 +98,7 @@ label {
   border-radius: 50%;
   border: 2px solid #6d9bfd;
 }
+
 .slider_controls > label > span {
   padding: 2.5rem 1.2rem;
 }
@@ -119,10 +117,6 @@ label {
 
 #slide_4:checked ~ .slides_wrapper .slider_img {
   margin-left: -300%;
-}
-
-#slide_1:checked:hover ~ .slider_controls label:nth-child(1) {
-  border-color: #ffffff;
 }
 
 #slide_1:hover ~ .slider_controls label:nth-child(1),
