@@ -23,6 +23,12 @@ h1 {
   text-align: center;
 }
 
+@media screen and (max-width: 480px) {
+  h1 {
+    font-size: 3rem;
+  }
+}
+
 h2 {
   font-family: 'Roboto Mono';
   font-style: normal;
@@ -31,6 +37,13 @@ h2 {
   font-weight: 400;
   color: #ffffff;
   margin-top: 1rem;
+}
+
+@media screen and (max-width: 480px) {
+  h2 {
+    font-size: 1.8rem;
+    margin-top: 4rem;
+  }
 }
 
 input {
@@ -66,6 +79,13 @@ input {
   justify-content: flex-end;
   margin-top: -2.7rem;
   padding-bottom: 10rem;
+}
+
+@media screen and (max-width: 480px) {
+  .slider_controls {
+    justify-content: center;
+    margin-top: -4.7rem;
+  }
 }
 
 label {
