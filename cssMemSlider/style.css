@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 10px;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #25282a;
+  padding: 2rem;
+}
+
+h1 {
+  font-family: 'Roboto Mono';
+  font-weight: 400;
+  margin: 2rem auto;
+  font-size: 4rem;
+  font-weight: 400;
+  color: #ffffff;
+  text-align: center;
+}
+
+@media screen and (max-width: 480px) {
+  h1 {
+    font-size: 3rem;
+  }
+}
+
+h2 {
+  font-family: 'Roboto Mono';
+  font-weight: 400;
+  font-size: 2.2rem;
+  font-weight: 400;
+  color: #ffffff;
+  margin-top: 1rem;
+}
+
+@media screen and (max-width: 480px) {
+  h2 {
+    font-size: 1.8rem;
+    margin-top: 5rem;
+  }
+}
+
+input {
+  display: none;
+}
+
+.wrapper {
+  max-width: 80rem;
+  height: auto;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.slide {
+  width: 25%;
+}
+
+.slide > img {
+  height: auto;
+  width: 100%;
+  border-radius: 1rem;
+}
+
+.slider_img {
+  display: flex;
+  width: 400%;
+  transition: transform 0.2s ease-out;
+}
+
+.slider_controls {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: -2rem;
+  padding-bottom: 10rem;
+}
+
+@media screen and (max-width: 480px) {
+  .slider_controls {
+    justify-content: center;
+    margin-top: -5rem;
+  }
+}
+
+label {
+  padding: 0.6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1.2rem;
+  height: 1.2rem;
+  margin-left: 1rem;
+  background-color: #6d9bfd;
+  cursor: pointer;
+  border-radius: 50%;
+  border: 2px solid #6d9bfd;
+}
+
+.slider_controls > label > span {
+  padding: 2.5rem 1.2rem;
+  z-index: 2;
+}
+
+#slide_1:checked ~ .slides_wrapper .slider_img {
+  transform: translateX(0);
+}
+
+#slide_2:checked ~ .slides_wrapper .slider_img {
+  transform: translateX(-25%);
+}
+
+#slide_3:checked ~ .slides_wrapper .slider_img {
+  transform: translateX(-50%);
+}
+
+#slide_4:checked ~ .slides_wrapper .slider_img {
+  transform: translateX(-75%);
+}
+
+#slide_1:hover ~ .slider_controls label:nth-child(1),
+#slide_2:hover ~ .slider_controls label:nth-child(2),
+#slide_3:hover ~ .slider_controls label:nth-child(3),
+#slide_4:hover ~ .slider_controls label:nth-child(4) {
+  border-color: #ffffff;
+  background-color: #ffffff;
+}
+
+#slide_1:checked ~ .slider_controls label:nth-child(1),
+#slide_2:checked ~ .slider_controls label:nth-child(2),
+#slide_3:checked ~ .slider_controls label:nth-child(3),
+#slide_4:checked ~ .slider_controls label:nth-child(4) {
+  background-color: transparent;
+}
